@@ -1,33 +1,33 @@
 describe('Cookie API:', function () {
     describe('#getCookie()', function () {
         before(function () {
-            commonutils.setCookie('test', 'getTestValue')
+            shareutils.setCookie('test', 'getTestValue')
         })
-        it(`commonutils.getCookie('test', 'getTestValue') should return true`, function () {
-            assert(commonutils.getCookie('test') === 'getTestValue')
+        it(`shareutils.getCookie('test', 'getTestValue') should return true`, function () {
+            assert(shareutils.getCookie('test') === 'getTestValue')
         })
         after(function () {
-            commonutils.removeCookie('test')
+            shareutils.removeCookie('test')
         })
     })
 
     describe('#removeCookie()', function () {
         before(function () {
-            commonutils.setCookie('test', 'removeTestValue')
+            shareutils.setCookie('test', 'removeTestValue')
         })
-        it(`commonutils.removeCookie('test') should return false`, function () {
-            commonutils.removeCookie('test')
-            assert.notEqual(commonutils.getCookie('test') === 'removeTestValue')
+        it(`shareutils.removeCookie('test') should return false`, function () {
+            shareutils.removeCookie('test')
+            assert.notEqual(shareutils.getCookie('test') === 'removeTestValue')
         })
     })
 
     describe('#setCookie()', function () {
-        it(`commonutils.getCookie('test', 'setCookie') should return true`, function () {
-            commonutils.setCookie('test', 'setCookie')
-            assert(commonutils.getCookie('test') === 'setCookie')
+        it(`shareutils.getCookie('test', 'setCookie') should return true`, function () {
+            shareutils.setCookie('test', 'setCookie')
+            assert(shareutils.getCookie('test') === 'setCookie')
         })
         after(function () {
-            commonutils.removeCookie('test')
+            shareutils.removeCookie('test')
         })
     })
 })

@@ -5,13 +5,13 @@ describe('Dom API:', function () {
             length = 20;
         before(function () {
             $body.style.height = '10000px'
-            commonutils.setScrollTop(length)
+            shareutils.setScrollTop(length)
         })
-        it(`commonutils.getScrollTop() should return true`, function () {
-            assert(commonutils.getScrollTop() === length)
+        it(`shareutils.getScrollTop() should return true`, function () {
+            assert(shareutils.getScrollTop() === length)
         })
         after(function () {
-            commonutils.setScrollTop(0)
+            shareutils.setScrollTop(0)
             $body.style.height = bodyHeight
         })
     });
@@ -22,14 +22,14 @@ describe('Dom API:', function () {
             length = 20;
         before(function () {
             $body.style.height = '10000px'
-            commonutils.setScrollTop(length)
+            shareutils.setScrollTop(length)
         })
-        it(`commonutils.getScrollTop() should return true`, function () {
-            commonutils.setScrollTop(length)
-            assert(commonutils.getScrollTop() === length)
+        it(`shareutils.getScrollTop() should return true`, function () {
+            shareutils.setScrollTop(length)
+            assert(shareutils.getScrollTop() === length)
         })
         after(function () {
-            commonutils.setScrollTop(0)
+            shareutils.setScrollTop(0)
             $body.style.height = bodyHeight
         })
     });
@@ -45,8 +45,8 @@ describe('Dom API:', function () {
             document.body.appendChild(div)
             $ele = document.querySelector('#J_addClass')
         })
-        it(`commonutils.offset() should return true`, function () {
-            let offset = commonutils.offset($ele)
+        it(`shareutils.offset() should return true`, function () {
+            let offset = shareutils.offset($ele)
             assert(offset.left === 300 && offset.top === 200)
         })
         after(function () {
@@ -63,15 +63,15 @@ describe('Dom API:', function () {
         before(function () {
             $body.style.height = '10000px'
         })
-        it(`commonutils.scrollTo() should return true`, function (done) {
-            commonutils.scrollTo(y, duration)
+        it(`shareutils.scrollTo() should return true`, function (done) {
+            shareutils.scrollTo(y, duration)
             setTimeout(function () {
-                assert(commonutils.getScrollTop() === y)
+                assert(shareutils.getScrollTop() === y)
                 done()
             }, duration + 200)
         })
         after(function () {
-            commonutils.setScrollTop(0)
+            shareutils.setScrollTop(0)
             $body.style.height = bodyHeight
         })
     });
@@ -79,8 +79,8 @@ describe('Dom API:', function () {
 
     describe('#windowResize()', function () {
         let innerHeight = window.innerHeight
-        it(`commonutils.windowResize(downCb) should return true`, function (done) {
-            commonutils.windowResize(function () {
+        it(`shareutils.windowResize(downCb) should return true`, function (done) {
+            shareutils.windowResize(function () {
                 // 键盘缩回回调
                 assert(window.innerHeight == innerHeight)
                 done()
@@ -92,8 +92,8 @@ describe('Dom API:', function () {
 
     describe('#windowResize()', function () {
         let innerHeight = window.innerHeight
-        it(`commonutils.windowResize(upCb) should return true`, function (done) {
-            commonutils.windowResize(function () {}, function () {
+        it(`shareutils.windowResize(upCb) should return true`, function (done) {
+            shareutils.windowResize(function () {}, function () {
                 // 键盘弹起回调
                 assert(window.innerHeight === innerHeight - 200)
                 done()

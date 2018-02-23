@@ -1,4 +1,4 @@
-# commonutils
+# shareutils
 
  
 前端通用工具库  
@@ -9,36 +9,36 @@
 
 ## 安装使用
 
-1. 直接下载`min`目录下的[commonutils.min.js](https://github.com/zhangzl1988/commonutils/blob/master/min/commonutils.min.js)使用，支持UMD通用模块规范  
+1. 直接下载`min`目录下的[shareutils.min.js](https://github.com/zhangzl1988/shareutils/blob/master/min/shareutils.min.js)使用，支持UMD通用模块规范  
 2. 使用npm安装
 
 ### 浏览器:
 ``` html
-  <script src="commonutils.min.js"></script>
+  <script src="shareutils.min.js"></script>
   <script>
-      var OS = commonutils.getOS()
+      var OS = shareutils.getOS()
   </script>
 ```
 
 ### npm:
 ``` bash
-$ npm install --save-dev commonutils
+$ npm install --save-dev shareutils
 ```
 
 webpack、RequireJS、SeaJS等
 
 ``` javascript
 // 完整引入
-const commonutils = require('commonutils')
-const OS = commonutils.getOS()
+const shareutils = require('shareutils')
+const OS = shareutils.getOS()
 ```
 
 **推荐使用方法**  
 
 你真的不需要完整引入所有函数，所以只引入需要使用的方法即可。
 ``` javascript
-// 只引入部分方法('commonutils/<方法名>')
-const getOS = require('commonutils/getOS')
+// 只引入部分方法('shareutils/<方法名>')
+const getOS = require('shareutils/getOS')
 const OS = getOS()
 ```
 ## API文档
@@ -104,48 +104,48 @@ const OS = getOS()
 #### &emsp;&emsp;[parseQueryString][parseQueryString]&emsp;&emsp;url参数转对象
 #### &emsp;&emsp;[stringfyQueryString][stringfyQueryString]&emsp;&emsp;对象序列化
 
-[arrayEqual]:https://github.com/zhangzl1988/commonutils/blob/master/src/array/arrayEqual.js
+[arrayEqual]:https://github.com/zhangzl1988/shareutils/blob/master/src/array/arrayEqual.js
 
-[addClass]:https://github.com/zhangzl1988/commonutils/blob/master/src/class/addClass.js
-[hasClass]:https://github.com/zhangzl1988/commonutils/blob/master/src/class/hasClass.js
-[removeClass]:https://github.com/zhangzl1988/commonutils/blob/master/src/class/removeClass.js
+[addClass]:https://github.com/zhangzl1988/shareutils/blob/master/src/class/addClass.js
+[hasClass]:https://github.com/zhangzl1988/shareutils/blob/master/src/class/hasClass.js
+[removeClass]:https://github.com/zhangzl1988/shareutils/blob/master/src/class/removeClass.js
 
-[getCookie]:https://github.com/zhangzl1988/commonutils/blob/master/src/cookie/getCookie.js
-[removeCookie]:https://github.com/zhangzl1988/commonutils/blob/master/src/cookie/removeCookie.js
-[setCookie]:https://github.com/zhangzl1988/commonutils/blob/master/src/cookie/setCookie.js
+[getCookie]:https://github.com/zhangzl1988/shareutils/blob/master/src/cookie/getCookie.js
+[removeCookie]:https://github.com/zhangzl1988/shareutils/blob/master/src/cookie/removeCookie.js
+[setCookie]:https://github.com/zhangzl1988/shareutils/blob/master/src/cookie/setCookie.js
 
-[getExplore]:https://github.com/zhangzl1988/commonutils/blob/master/src/device/getExplore.js
-[getOS]:https://github.com/zhangzl1988/commonutils/blob/master/src/device/getOS.js
+[getExplore]:https://github.com/zhangzl1988/shareutils/blob/master/src/device/getExplore.js
+[getOS]:https://github.com/zhangzl1988/shareutils/blob/master/src/device/getOS.js
 
-[getScrollTop]:https://github.com/zhangzl1988/commonutils/blob/master/src/dom/getScrollTop.js
-[offset]:https://github.com/zhangzl1988/commonutils/blob/master/src/dom/offset.js
-[scrollTo]:https://github.com/zhangzl1988/commonutils/blob/master/src/dom/scrollTo.js
-[setScrollTop]:https://github.com/zhangzl1988/commonutils/blob/master/src/dom/setScrollTop.js
-[windowResize]:https://github.com/zhangzl1988/commonutils/blob/master/src/dom/windowResize.js
+[getScrollTop]:https://github.com/zhangzl1988/shareutils/blob/master/src/dom/getScrollTop.js
+[offset]:https://github.com/zhangzl1988/shareutils/blob/master/src/dom/offset.js
+[scrollTo]:https://github.com/zhangzl1988/shareutils/blob/master/src/dom/scrollTo.js
+[setScrollTop]:https://github.com/zhangzl1988/shareutils/blob/master/src/dom/setScrollTop.js
+[windowResize]:https://github.com/zhangzl1988/shareutils/blob/master/src/dom/windowResize.js
 
-[debounce]:https://github.com/zhangzl1988/commonutils/blob/master/src/function/debounce.js
-[throttle]:https://github.com/zhangzl1988/commonutils/blob/master/src/function/throttle.js
+[debounce]:https://github.com/zhangzl1988/shareutils/blob/master/src/function/debounce.js
+[throttle]:https://github.com/zhangzl1988/shareutils/blob/master/src/function/throttle.js
 
-[getKeyName]:https://github.com/zhangzl1988/commonutils/blob/master/src/keycode/getKeyName.js
+[getKeyName]:https://github.com/zhangzl1988/shareutils/blob/master/src/keycode/getKeyName.js
 
-[deepClone]:https://github.com/zhangzl1988/commonutils/blob/master/src/object/deepClone.js
-[isEmptyObject]:https://github.com/zhangzl1988/commonutils/blob/master/src/object/isEmptyObject.js
+[deepClone]:https://github.com/zhangzl1988/shareutils/blob/master/src/object/deepClone.js
+[isEmptyObject]:https://github.com/zhangzl1988/shareutils/blob/master/src/object/isEmptyObject.js
 
-[randomColor]:https://github.com/zhangzl1988/commonutils/blob/master/src/random/randomColor.js
-[randomNum]:https://github.com/zhangzl1988/commonutils/blob/master/src/random/randomNum.js
+[randomColor]:https://github.com/zhangzl1988/shareutils/blob/master/src/random/randomColor.js
+[randomNum]:https://github.com/zhangzl1988/shareutils/blob/master/src/random/randomNum.js
 
-[isEmail]:https://github.com/zhangzl1988/commonutils/blob/master/src/regexp/isEmail.js
-[isIdCard]:https://github.com/zhangzl1988/commonutils/blob/master/src/regexp/isIdCard.js
-[isPhoneNum]:https://github.com/zhangzl1988/commonutils/blob/master/src/regexp/isPhoneNum.js
-[isUrl]:https://github.com/zhangzl1988/commonutils/blob/master/src/regexp/isUrl.js
+[isEmail]:https://github.com/zhangzl1988/shareutils/blob/master/src/regexp/isEmail.js
+[isIdCard]:https://github.com/zhangzl1988/shareutils/blob/master/src/regexp/isIdCard.js
+[isPhoneNum]:https://github.com/zhangzl1988/shareutils/blob/master/src/regexp/isPhoneNum.js
+[isUrl]:https://github.com/zhangzl1988/shareutils/blob/master/src/regexp/isUrl.js
 
-[digitUppercase]:https://github.com/zhangzl1988/commonutils/blob/master/src/string/digitUppercase.js
+[digitUppercase]:https://github.com/zhangzl1988/shareutils/blob/master/src/string/digitUppercase.js
 
-[isSupportWebP]:https://github.com/zhangzl1988/commonutils/blob/master/src/support/isSupportWebP.js
+[isSupportWebP]:https://github.com/zhangzl1988/shareutils/blob/master/src/support/isSupportWebP.js
 
-[formatPassTime]:https://github.com/zhangzl1988/commonutils/blob/master/src/time/formatPassTime.js
-[formatRemainTime]:https://github.com/zhangzl1988/commonutils/blob/master/src/time/formatRemainTime.js
-[isSameDay]:https://github.com/zhangzl1988/commonutils/blob/master/src/time/isSameDay.js
+[formatPassTime]:https://github.com/zhangzl1988/shareutils/blob/master/src/time/formatPassTime.js
+[formatRemainTime]:https://github.com/zhangzl1988/shareutils/blob/master/src/time/formatRemainTime.js
+[isSameDay]:https://github.com/zhangzl1988/shareutils/blob/master/src/time/isSameDay.js
 
-[parseQueryString]:https://github.com/zhangzl1988/commonutils/blob/master/src/url/parseQueryString.js
-[stringfyQueryString]:https://github.com/zhangzl1988/commonutils/blob/master/src/url/stringfyQueryString.js
+[parseQueryString]:https://github.com/zhangzl1988/shareutils/blob/master/src/url/parseQueryString.js
+[stringfyQueryString]:https://github.com/zhangzl1988/shareutils/blob/master/src/url/stringfyQueryString.js

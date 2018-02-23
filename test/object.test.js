@@ -1,6 +1,6 @@
 describe('Object API:', function () {
     describe('#deepClone()', function () {
-        it(`person deepEqual commonutils.deepClone(person) should return true`, function () {
+        it(`person deepEqual shareutils.deepClone(person) should return true`, function () {
             let person = {
                 name: "user",
                 settings: {
@@ -8,10 +8,10 @@ describe('Object API:', function () {
                     second: [1, 2, 3, 4, 3]
                 }
             }
-            assert.deepEqual(person, commonutils.deepClone(person))
+            assert.deepEqual(person, shareutils.deepClone(person))
         });
 
-        it(`person === commonutils.deepClone(person) should return false`, function () {
+        it(`person === shareutils.deepClone(person) should return false`, function () {
             let person = {
                 name: "user",
                 settings: {
@@ -19,23 +19,23 @@ describe('Object API:', function () {
                     second: [1, 2, 3, 4, 3]
                 }
             }
-            assert.notEqual(person, commonutils.deepClone(person))
+            assert.notEqual(person, shareutils.deepClone(person))
         });
     });
 
     describe('#isEmptyObject()', function () {
-        it(`commonutils.isEmptyObject({}) should return true`, function () {
-            assert(commonutils.deepClone({}))
+        it(`shareutils.isEmptyObject({}) should return true`, function () {
+            assert(shareutils.deepClone({}))
         });
 
-        it(`commonutils.isEmptyObject({ one: 1 }) should return false`, function () {
-            assert.notEqual(commonutils.isEmptyObject({
+        it(`shareutils.isEmptyObject({ one: 1 }) should return false`, function () {
+            assert.notEqual(shareutils.isEmptyObject({
                 one: 1
             }))
         });
 
-        it(`commonutils.isEmptyObject([]) should return false`, function () {
-            assert.notEqual(commonutils.isEmptyObject([]))
+        it(`shareutils.isEmptyObject([]) should return false`, function () {
+            assert.notEqual(shareutils.isEmptyObject([]))
         });
     });
 })
