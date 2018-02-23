@@ -9,7 +9,7 @@
 
 ## 安装使用
 
-1. 直接下载`min`目录下的[shareutils.min.js](https://github.com/zhangzl1988/shareutils/blob/master/min/shareutils.min.js)使用，支持UMD通用模块规范  
+1. 直接下载`dist`目录下的[shareutils.min.js](https://github.com/zhangzl1988/shareutils/blob/master/dist/shareutils.min.js)使用，支持UMD通用模块规范  
 2. 使用npm安装
 
 ### 浏览器:
