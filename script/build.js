@@ -32,21 +32,21 @@ new Promise((resolve, reject) => {
     })
 }).then(() => {
     // 替换模块文件
-    // let copying = ora('copying...')
-    // copying.start()
-    // rm('*.js', err => {
-    //     if (err) throw (err)
-    //     let folderList = fs.readdirSync(path.resolve(rootPath, 'src'))
-    //     folderList.forEach((item, index) => {
-    //         copy(`src/${item}/*.js`, rootPath, function (err, files) {
-    //             if (err) throw err;
-    //             if (index === folderList.length - 1) {
-    //                 console.log(chalk.cyan('  Copy complete.\n'))
-    //                 copying.stop()
-    //             }
-    //         })
-    //     })
-    // })
+    let copying = ora('copying...')
+    copying.start()
+    rm(`modules/*.js`, err => {
+        if (err) throw (err)
+        let folderList = fs.readdirSync(path.resolve(rootPath, 'src'))
+        folderList.forEach((item, index) => {
+            copy(`src/${item}/*.js`, path.resolve(rootPath, 'modules'), function (err, files) {
+                if (err) throw err;
+                if (index === folderList.length - 1) {
+                    console.log(chalk.cyan('  Copy complete.\n'))
+                    copying.stop()
+                }
+            })
+        })
+    })
 }).catch((err) => {
     throw err
 })

@@ -35,10 +35,10 @@ const OS = shareutils.getOS()
 
 **推荐使用方法**  
 
-你真的不需要完整引入所有函数，所以只引入需要使用的方法即可。
+不需要完整引入所有函数，只引入需要使用的方法即可。
 ``` javascript
-// 只引入部分方法('shareutils/<方法名>')
-const getOS = require('shareutils/getOS')
+// 只引入部分方法('shareutils/modules/<方法名>')
+const getOS = require('shareutils/modules/getOS')
 const OS = getOS()
 ```
 ## API文档
